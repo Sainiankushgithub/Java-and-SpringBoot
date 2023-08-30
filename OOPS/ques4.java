@@ -1,5 +1,5 @@
 package OOPS;
-import java.util.*;
+
 class Construct {
 
     String Name;
@@ -7,14 +7,14 @@ class Construct {
     String Section;
     int age;
 
-    //  PARAMETERIZED CONSTRUCTOR 
+    //  USER DEFINED CONSTRUCTOR 
 
-    Construct(String Name,int roll_no,String Section,int age)
+    Construct()
     {
-        this.Name=Name;
-        this.roll_no=roll_no;
-        this.Section=Section;
-        this.age=age;
+        Name="Ankush saini";
+        roll_no=2206409;
+        Section="IT - 05";
+        age=19;
     }
     void display()
     {
@@ -24,22 +24,7 @@ class Construct {
         System.out.println("Age : "+age);
     }
     public static void main(String[] args) {
-        String name;
-        int roll_no;
-        String Section;
-        int age;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter your name : ");
-        name=sc.nextLine();
-        System.out.println("Enter your roll number : ");
-        roll_no=sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter your Section : ");
-        Section=sc.nextLine();
-        System.out.println("Enter your age : ");
-        age=sc.nextInt();
-        Construct cn=new Construct(name,roll_no,Section,age);
+        Construct cn=new Construct();
         cn.display();
-        sc.close();
     }
 }
