@@ -1,4 +1,4 @@
-package Class;
+package Class.Lab_Assignment_1;
 import java.util.*;
 class Grade
 {
