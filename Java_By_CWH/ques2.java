@@ -11,7 +11,7 @@ public class ques2 {
         System.out.println("Enter 1 for ROCK !");
         System.out.println("Enter 2 for PAPER !");
         System.out.println("Enter 3 for PENCIL !");
-        System.out.println("Enter 4 for CEISER !");
+        System.out.println("Enter 4 for scissor !");
         Random rand=new Random();
         System.out.println("Here You Have 5 matches with Computer Let See Who Will Win !!!! ");
         int YouCount=0,ComCount=0;
