@@ -7,6 +7,7 @@ public class ques2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int choice;
+        System.out.println("\t!! THIS IS A ROCK PAPER PENCIL CESIER GAME !!");
         System.out.println("Enter 1 for ROCK !");
         System.out.println("Enter 2 for PAPER !");
         System.out.println("Enter 3 for PENCIL !");
@@ -14,37 +15,48 @@ public class ques2 {
         Random rand=new Random();
         System.out.println("Here You Have 5 matches with Computer Let See Who Will Win !!!! ");
         int YouCount=0,ComCount=0;
-        for(int i=0;i<5;i++)
+        int size=5;
+        for(int i=0;i<size;i++)
         {
             System.out.println("Enter Your choice ");
             choice=sc.nextInt();
-            int randInt=rand.nextInt(1, 4);
-            if(((choice==1)&&(randInt==3))||((choice==1)&&randInt==4))
+            int randInt=rand.nextInt(1, 5);
+            if(choice==randInt)
             {
+                System.out.println("Match tie ");
+                System.out.println("Now you have to play "+(++size)+" Mtaches with computer ");
+            }
+            else if(((choice==1)&&(randInt==3))||((choice==1)&&randInt==4))
+            {
+                System.out.println("Computer gets : "+randInt);
                 YouCount++;
                 System.out.println(" You won the "+(i+1)+" match ");
                 System.out.println("Your Score : "+YouCount+" Computer Score : "+ComCount+"\n");
             }
             else if((choice==2)&&(randInt==1))
             {
+                System.out.println("Computer gets : "+randInt);
                 YouCount++;
                 System.out.println(" You won the "+(i+1)+" match ");
                 System.out.println("Your Score : "+YouCount+" Computer Score : "+ComCount+"\n");
             }
             else if((choice==3)&&(randInt==1))
             {
+                System.out.println("Computer gets : "+randInt);
                 YouCount++;
                 System.out.println(" You won the "+(i+1)+" match ");
                 System.out.println("Your Score : "+YouCount+" Computer Score : "+ComCount+"\n");
             }
             else if(((choice==4)&&(randInt==2))||((choice==4)&&(randInt==3)))
             {
+                System.out.println("Computer gets : "+randInt);
                 YouCount++;
                 System.out.println(" You won the "+(i+1)+" match ");
                 System.out.println("Your Score : "+YouCount+" Computer Score : "+ComCount+"\n");
             }
             else
             {
+                System.out.println("Computer gets : "+randInt);
                 ComCount++;
                 System.out.println(" You lost the "+(i+1)+" match ");
                 System.out.println("Your Score : "+YouCount+" Computer Score : "+ComCount+"\n");
