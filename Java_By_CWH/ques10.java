@@ -10,6 +10,10 @@ class Base1
     {
         System.out.println("I'm constructor with  x value as : "+x);
     }
+    void display()
+    {
+        System.out.println("Displayed all the material ");
+    }
 }
 class Derived1 extends Base1
 {
@@ -46,6 +50,7 @@ public class ques10 {
         // childDerived1 cd=new childDerived1();
 
         childDerived1 cd=new childDerived1(12, 23, 34);
+        cd.display();
         sc.close();
     }
 }
