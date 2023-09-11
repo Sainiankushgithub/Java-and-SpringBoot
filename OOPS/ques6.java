@@ -3,6 +3,11 @@ class Cylinder
 {
     private int radius;
     private int height;
+    public Cylinder(int radius,int height)
+    {
+        this.radius=radius;
+        this.height=height;
+    }
     public void setradius(int radius)
     {
         this.radius=radius;
@@ -36,16 +41,20 @@ public class ques6 {
         //  PROBLEM NUMBER 1 
 
 
-        Cylinder c=new Cylinder();
-        c.setradius(9);
-        System.out.println("Radius : "+c.getradius());
-        c.setheight(12);
-        System.out.println("Height : "+c.getheight());
+        Cylinder c=new Cylinder(9,12);
+
+
+        // c.setradius(9);
+        // System.out.println("Radius : "+c.getradius());
+        // c.setheight(12);
+        // System.out.println("Height : "+c.getheight());
 
         // PROBLEM NUMBER 2  
 
 
         System.out.println("Surface Area of a cylinder : "+c.surfaceArea());
         System.out.println("Volume of a Cylinder : "+c.volume());
+
+        // PROBLEM NUMBER 3 
     }
 }
