@@ -1,4 +1,8 @@
 package OOPS;
+
+//   Abstract classes 
+
+
 abstract class Parent1
 {
     public Parent1()
