@@ -20,5 +20,7 @@ public class Democompile {
         {
             System.out.println(e);
         }
+        System.out.println("Successfull Execution By Compile Time ");
+        sc.close();
     }
 }
