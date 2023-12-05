@@ -1,6 +1,6 @@
 package OOPS;
 import java.util.*;
-class Construct {
+class Const {
 
     String Name;
     int roll_no;
@@ -9,7 +9,7 @@ class Construct {
 
     //  PARAMETERIZED CONSTRUCTOR 
 
-    Construct(String Name,int roll_no,String Section,int age)
+    Const(String Name,int roll_no,String Section,int age)
     {
         this.Name=Name;
         this.roll_no=roll_no;
@@ -38,7 +38,7 @@ class Construct {
         Section=sc.nextLine();
         System.out.println("Enter your age : ");
         age=sc.nextInt();
-        Construct cn=new Construct(name,roll_no,Section,age);
+        Const cn=new Const(name,roll_no,Section,age);
         cn.display();
         sc.close();
     }
