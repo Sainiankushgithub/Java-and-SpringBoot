@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
 
-public class Main {
+public class ques {
     public static void main(String[] args) throws  Exception{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the name");
@@ -16,7 +16,7 @@ public class Main {
         String gender=sc.nextLine();
         System.out.println("Enter the city");
         String city=sc.nextLine();
-        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC_DB","root","Ankushsaini55@@");
+        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC_DB","root","ANKUSHSAINI");
 //        PreparedStatement ps=con.prepareStatement("INSERT INTO register VALUES ('"+name+"','"+email+"','"+password+"','"+gender+"','"+city+"') ");
 //        ANOTHER WAY OF PUTTING THE VALUES IN MY SQL
         PreparedStatement ps=con.prepareStatement("INSERT INTO register VALUES (?,?,?,?,?)");
