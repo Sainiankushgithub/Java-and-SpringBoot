@@ -10,7 +10,7 @@ public class JdbcUpdate {
         String name=sc.nextLine();
         System.out.println("Enter the new city name ");
         String city=sc.nextLine();
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC_DB","root","Ankushsaini55@@");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC_DB","root","Ankushsaini");
         PreparedStatement ps=con.prepareStatement("UPDATE register SET city=? WHERE name=?");
         ps.setString(1,city);
         ps.setString(2,name);
