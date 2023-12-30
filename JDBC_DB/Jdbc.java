@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
 
-public class ques {
+public class Jdbc {
     public static void main(String[] args) throws  Exception{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the name");
@@ -34,5 +34,6 @@ public class ques {
         {
             System.out.println("Fail");
         }
+        sc.close();
     }
 }
