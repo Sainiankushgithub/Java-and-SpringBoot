@@ -10,6 +10,7 @@ public class JdbcDelete {
         String name=sc.nextLine();
         Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC_DB","root","Ankushsaini");
         PreparedStatement ps=con.prepareStatement("DELETE FROM register WHERE name=?");
+        
         ps.setString(1,name);
         int i=ps.executeUpdate();
         if(i>0)
