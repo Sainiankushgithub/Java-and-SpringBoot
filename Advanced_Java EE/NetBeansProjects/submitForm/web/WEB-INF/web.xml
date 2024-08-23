@@ -6,6 +6,11 @@
 	 version="6.0">
     
     
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    
+    
     <!--servlet declaration for success java class-->
     
     <servlet>
