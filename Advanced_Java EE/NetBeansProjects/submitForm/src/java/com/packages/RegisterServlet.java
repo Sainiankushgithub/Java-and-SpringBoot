@@ -1,5 +1,6 @@
 package com.packages;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,6 +23,8 @@ public class RegisterServlet extends HttpServlet{
         String course=request.getParameter("user_course");
         String cond=request.getParameter("condition");
         
+        
+        
         if(cond!=null){
             if(cond.equals("checked")){
                 out.println("<h2> Name : " +name+ "</h2>");
@@ -29,6 +32,9 @@ public class RegisterServlet extends HttpServlet{
                 out.println("<h2> Email : " +email+ "</h2>");
                 out.println("<h2> Gender : " +gender+ "</h2>");
                 out.println("<h2> Course : " +course+ "</h2>");
+                
+                RequestDispatcher rd=request.getRequestDispatcher("success");
+                rd.forward(request, response);
             }
             else{
                 out.println("<h2>You have not accepted the terms and conditions</h2>");
@@ -36,6 +42,8 @@ public class RegisterServlet extends HttpServlet{
         }
         else{
                 out.println("<h2>You have not accepted the terms and conditions</h2>");
+                RequestDispatcher rd=request.getRequestDispatcher("index.html");
+                rd.include(request, response);
             }
     }
 }
