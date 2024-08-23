@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	 version="6.0">
+
+    
+    <!--servlet declaration  for first servlet-->
+    <servlet>
+        <servlet-name>first</servlet-name>
+        <servlet-class>com.servlet.MyfirstServlet</servlet-class>
+    </servlet>
+    
+    <!--mapping-->
+    
+    <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/web</url-pattern>
+    </servlet-mapping>
+    
+    <!--servlet declaration for second servlet-->
+    
+    <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>com.servlet.MysecondServlet</servlet-class>
+    </servlet>
+    <!--mapping for second servlet-->
+    <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/web2</url-pattern>
+    </servlet-mapping>
+    
+    <!--servlet declaration for httpservlet-->
+    <servlet>
+        <servlet-name>third</servlet-name>
+        <servlet-class>com.servlet.MythirdServlet</servlet-class>
+    </servlet>
+    
+    <!--mapping-->
+    
+    <servlet-mapping>
+        <servlet-name>third</servlet-name>
+        <url-pattern>/web3</url-pattern>
+    </servlet-mapping>
+</web-app>
