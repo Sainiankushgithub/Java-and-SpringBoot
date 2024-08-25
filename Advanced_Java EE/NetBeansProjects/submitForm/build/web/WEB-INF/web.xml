@@ -40,4 +40,33 @@
         <servlet-name>form</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>    
+    
+    <!--servlet declaration for com.attribute package-->
+    
+    <servlet>
+        <servlet-name>S1</servlet-name>
+        <servlet-class>com.attribute.s1</servlet-class>
+    </servlet>
+    
+    <!--mapping-->
+    <servlet-mapping>
+        <servlet-name>S1</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--servlet declaration for com.attribute package-->
+    
+    <servlet>
+        <servlet-name>S2</servlet-name>
+        <servlet-class>com.attribute.s2</servlet-class>
+    </servlet>
+    
+    <!--mapping-->
+    <servlet-mapping>
+        <servlet-name>S2</servlet-name>
+        <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
+    
+    
 </web-app>
