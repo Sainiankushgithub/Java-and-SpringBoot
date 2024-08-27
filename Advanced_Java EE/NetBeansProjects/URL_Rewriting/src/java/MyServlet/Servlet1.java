@@ -22,7 +22,17 @@ public class Servlet1 extends HttpServlet {
             out.println("<body>");
             String name=request.getParameter("user_name");
             out.println("<h1>Your name is : "+name+"</h1>");
-            out.println("<h1><a href='servlet2?user="+name+"'>Go to servlet2</a></h1>");
+//            This one using URL Rewriting 
+//            out.println("<h1><a href='servlet2?user="+name+"'>Go to servlet2</a></h1>");
+
+//            Now This one using Hidden form field
+
+            out.println(""
+                    +"<form action='servlet2'>"
+                    + "<input type='hidden' name='user' value='"+name+"'/>"
+                    + "<button type='submit'>Go to servlet2</button>"
+                    + "</form>");
+            
             out.println("</body>");
             out.println("</html>");
         }

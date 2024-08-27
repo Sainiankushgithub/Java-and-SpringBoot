@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="URL_Rewriting" default="default" basedir=".">
-    <description>Builds, tests, and runs the project URL_Rewriting.</description>
+<project name="URL_Rewriting_&amp;_Hiidden_form_field" default="default" basedir=".">
+    <description>Builds, tests, and runs the project URL_Rewriting &amp; Hiidden_form_field.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
