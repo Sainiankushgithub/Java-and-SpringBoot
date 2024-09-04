@@ -20,12 +20,14 @@
             <%!
                 int a=100;
                 int b=10;
+                String s=null;
                 
                 %>
                 <%
                     int division =a/b;
                     %>
                     <h1>Division : <%= division%></h1>
+                    <h1>length of a string : <%= s.length()%></h1>
         </h1>
         
     </body>

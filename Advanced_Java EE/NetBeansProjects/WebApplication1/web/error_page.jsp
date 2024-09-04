@@ -24,6 +24,9 @@
         <div class="container">
             <h1>Something went wrong !!!!.......</h1>
         <p>Note...........</p>
+        <p>
+            <%= exception%>
+        </p>
         </div>
     </body>
 </html>
