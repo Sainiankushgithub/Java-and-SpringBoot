@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+   
+
+    <!--servlet declaration for MyFilter1-->
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.filter.Myservlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/Myservlet1</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--servlet declaration for MYFilter2-->
+    <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>com.filter.Myservlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/Myservlet2</url-pattern>
+    </servlet-mapping>
+    
+    <!--filter declaration-->
+    <filter>
+        <filter-name>Filter1</filter-name>
+        <filter-class>com.filter.MyFilter</filter-class>
+    </filter>
+    
+    <!--filter mapping-->
+    
+    <filter-mapping>
+        <filter-name>Filter1</filter-name>
+        <url-pattern>/Myservlet1</url-pattern>
+    </filter-mapping>
+</web-app>
