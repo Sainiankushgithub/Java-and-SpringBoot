@@ -1,0 +1,14 @@
+package in.sp.beans;
+
+public class Student {
+	private String name;
+	private int roll_no;
+	private float marks;
+	
+	
+	public void display() {
+		System.out.println("Name : "+name);
+		System.out.println("Roll no : "+roll_no);
+		System.out.println("Marks "+marks);
+	}
+}

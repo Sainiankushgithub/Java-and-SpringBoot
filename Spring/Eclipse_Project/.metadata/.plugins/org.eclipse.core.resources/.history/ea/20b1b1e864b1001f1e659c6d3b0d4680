@@ -1,0 +1,5 @@
+package in.sp.bean;
+
+public class User {
+
+}

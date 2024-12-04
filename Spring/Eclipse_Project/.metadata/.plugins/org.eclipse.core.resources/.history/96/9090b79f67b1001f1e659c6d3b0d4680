@@ -1,0 +1,15 @@
+package in.smartprogramming.springJavaConfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import in.sp.resources.userConfigFile;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context= new AnnotationConfigApplicationContext(userConfigFile.class);
+    	
+    }
+}
