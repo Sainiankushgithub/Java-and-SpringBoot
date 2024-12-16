@@ -26,14 +26,19 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="in.sp.main"/>
+			<item value="in.sp.dijec"/>
+			<item value="in.sp.di"/>
 			<item value="in.smartprogramming.springJavaConfig"/>
 			<item value="in.sp.beans"/>
-			<item value="in.sp.main"/>
 		</list>
 		<list key="groupId">
 			<item value="in.smartprogramming"/>
 		</list>
 		<list key="artifactId">
+			<item value="dependencyInjection3"/>
+			<item value="dependecyInjection2"/>
+			<item value="dependencyInjection"/>
 			<item value="springJavaConfig"/>
 			<item value="springjdbc"/>
 			<item value="springJDBCCrudOperation"/>
@@ -49,6 +54,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1,0"/>
 			<item value="1.0"/>
 		</list>
 	</section>
