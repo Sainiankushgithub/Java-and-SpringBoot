@@ -15,47 +15,39 @@
   </properties>
 
   <dependencies>
-  <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
-    <version>6.2.3</version>
+    <version>5.3.20</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
-    <version>6.2.3</version>
+    <version>5.3.20</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
-    <version>6.0.6</version>
+    <version>8.0.33</version>
 </dependency>
+
 
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>6.2.3.Final</version>
-    <type>pom</type>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-jdbc</artifactId>
-    <version>6.2.3</version>
+    <version>5.3.20.Final</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-orm</artifactId>
-    <version>6.2.3</version>
+    <version>5.3.20</version>
 </dependency>
 
 
@@ -66,5 +58,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    
   </dependencies>
 </project>
