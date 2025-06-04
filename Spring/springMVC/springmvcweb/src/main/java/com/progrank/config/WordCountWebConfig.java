@@ -8,12 +8,14 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import com.progrank.configuration.configDB;
+
 public class WordCountWebConfig implements WebApplicationInitializer {
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		AnnotationConfigWebApplicationContext webAC= new AnnotationConfigWebApplicationContext();
-		webAC.register(SpringApplicationConfig.class);
+		webAC.register(SpringApplicationConfig.class,configDB.class);
 		
 		DispatcherServlet ds = new DispatcherServlet(webAC);
 		ServletRegistration.Dynamic servlet = servletContext.addServlet("Myds", ds);
