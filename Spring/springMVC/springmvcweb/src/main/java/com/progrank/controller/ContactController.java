@@ -105,8 +105,6 @@ public class ContactController {
 		}
 		
 		
-		
-		
 		// INSERTING THE DATA INTO THE DATA BASE 
 		userDao.insert(user);
 		return "success";
