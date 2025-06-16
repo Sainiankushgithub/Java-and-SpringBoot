@@ -38,7 +38,7 @@
                 <div class="col-6">
                     <label class="form-label">Age</label>
                     <form:input path="age" type="number" cssClass="form-control" />
-                </div>
+                </div>	
                 <div class="col-6">
                     <label class="form-label">Gender</label>
                     <form:select path="gender" cssClass="form-select">
