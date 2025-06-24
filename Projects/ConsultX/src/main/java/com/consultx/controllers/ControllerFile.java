@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.consultx.dao.UserDao;
@@ -17,6 +18,11 @@ public class ControllerFile {
 	
 	@Autowired
 	private UserDao userDao;
+	
+	@RequestMapping("/")
+	public String homePage() {
+		return "redirect:/home";
+	}
 	
 	@RequestMapping("/signup")
 	public String signUp() {
@@ -61,6 +67,25 @@ public class ControllerFile {
 		return "redirect:/signup";
 	}
 	
+	@RequestMapping("/signin")
+	public String signin() {
+		return "signin";
+	}
+	
+	@RequestMapping(path="/requestform",method=RequestMethod.POST)
+	public String processingRequest(@RequestParam("email_phone")String email_phone,
+									@RequestParam("password")String password,RedirectAttributes model,HttpSession session) {
+		Users user=userDao.getUserByEmailOrPhoneAndPassword(email_phone, password);
+		if(user!=null) {
+			model.addFlashAttribute("validMessage", "Correct email & password");
+			session.setAttribute("user", user);
+		}
+		else {
+			model.addFlashAttribute("invalidMessage", "Wrong Email/Phone or password !");
+		}
+		return "redirect:/signin";
+	}
+	
 //  User Panel 
 	@RequestMapping("/user")
 	public String user(){
@@ -71,5 +96,16 @@ public class ControllerFile {
 	@RequestMapping("/home")
 	public String homme() {
 		return "home";
+	}
+	
+	
+	@RequestMapping("/what")
+	public String what_we_do() {
+		return "what_we_do";
+	}
+	
+	@RequestMapping("/contact")
+	public String contact() {
+		return "contact";
 	}
 }

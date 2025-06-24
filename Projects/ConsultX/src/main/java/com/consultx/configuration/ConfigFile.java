@@ -30,7 +30,7 @@ public class ConfigFile implements WebMvcConfigurer {
 	
 //  Driver Manager Data Source 
 	@Bean
-	public DataSource getDataSource() {
+	public DataSource getDataSource(){
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://localhost:3306/consultx");
@@ -40,13 +40,13 @@ public class ConfigFile implements WebMvcConfigurer {
 	}
 //    JDBC Template 
 	@Bean
-	public JdbcTemplate getJdbcTemplate() {
-		return new JdbcTemplate(getDataSource());
+	public JdbcTemplate getJdbcTemplate(DataSource dataSource) {
+		return new JdbcTemplate(dataSource);
 	}
 //    USER Implementations
 	@Bean
-	public UserDao getUserDao() {
-		return new UserDaoImpl(getJdbcTemplate());
+	public UserDao getUserDao(JdbcTemplate jdbcTemplate) {
+		return new UserDaoImpl(jdbcTemplate);
 	}
 	
 	@Override

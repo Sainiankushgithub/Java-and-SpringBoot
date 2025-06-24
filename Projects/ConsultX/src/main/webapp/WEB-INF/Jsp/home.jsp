@@ -49,25 +49,25 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 p-2">
-						<li class="nav-item"><a class="nav-link active" href="#">Home</a>
+						<li class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath }/home">Home</a>
 						</li>
 						<li class="nav-item"><a class="nav-link"
-							href="/html/what_we_do.html">What we do</a></li>
+							href="${pageContext.request.contextPath }/what">What we do</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/html/About.html">About us</a></li>
+							href="${pageContext.request.contextPath }/about">About us</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/html/contact.html">Contact Us</a></li>
+							href="${pageContext.request.contextPath }/contact">Contact Us</a></li>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown">
 								Our Services </a>
 							<ul class="dropdown-menu dropdown-menu-dark bg-dark fs-6">
-								<li><a class="dropdown-item" href="#">Career</a></li>
-								<li><a class="dropdown-item" href="#">Education</a></li>
-								<li><a class="dropdown-item" href="#">Health Related</a></li>
+								<li><a class="dropdown-item" href="${pageContext.request.contextPath }/career">Career</a></li>
+								<li><a class="dropdown-item" href="${pageContext.request.contextPath }/education">Education</a></li>
+								<li><a class="dropdown-item" href="${pageContext.request.contextPath }/health">Health Related</a></li>
 							</ul></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/html/signup.html">SignUp <i
+							href="${pageContext.request.contextPath }/signup">SignUp <i
 								class="fas fa-user-plus ps-2 text-white"></i></a></li>
 					</ul>
 				</div>

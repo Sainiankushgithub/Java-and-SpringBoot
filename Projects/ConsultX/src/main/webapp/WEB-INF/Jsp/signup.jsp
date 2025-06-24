@@ -107,7 +107,7 @@
 							<div class="input-group mt-3">
 								<span>I'm already a member!<a
 									class="ms-2 nav-link d-inline bg-dark text-white sign-border"
-									href="">Sign in</a></span>
+									href="${pageContext.request.contextPath}/signin">Sign in</a></span>
 							</div>
 							<!--  -->
 						</form>

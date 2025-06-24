@@ -208,13 +208,11 @@ option {
 /* Signup page CSS  */
 .signup-section {
   min-height: 100vh;
-  background: #000000;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(13, 13, 43, 1) 35%,
-    rgba(168, 168, 160, 1) 100%
-  );
+ /*  background: #000000; */
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   display: flex;
 }
 
@@ -229,3 +227,72 @@ span .sign-border:hover {
   background-color: white;
   color: black;
 }
+
+
+
+/*
+*
+
+Sign page css code
+
+*
+*/
+
+.sign-in{
+  background-color: black;
+}
+.bg-color-col1{
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.bg-color-col2{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-input{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  /* width: 100%; */
+  /* text-align: center; */
+}
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.custom-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.custom-input-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5px 0; */
+  /* border-bottom: 2px solid white; */
+}
+.custom-hr-tag{
+  border-bottom: 2px solid white;
+  padding: 5px;
+  width: 350px;
+  margin:0 auto;
+}
+.custom-bt-tag{
+  border-bottom: 1px solid white;
+  margin-top: 15px;
+  width: 100%;
+}
+.signup-btn{
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+}
+.signup-btn:hover{
+  background-color: black;
+  color:white;
+}
+
+
+
