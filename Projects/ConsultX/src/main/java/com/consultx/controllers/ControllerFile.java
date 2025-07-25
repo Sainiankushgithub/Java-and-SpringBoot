@@ -28,6 +28,16 @@ public class ControllerFile {
 	public String signUp() {
 		return "signup";
 	}
+	@RequestMapping("/signupConsultee")
+	public String signupConsultee() {
+	    return "signupConsultee"; 
+	}
+
+	@RequestMapping("/signupConsultor")
+	public String signupConsultor() {
+	    return "signupConsultor"; 
+	}
+
 	@RequestMapping(path="/processform",method =RequestMethod.POST)
 	public String processingForm(@ModelAttribute Users user,RedirectAttributes model,HttpSession session) {
 		

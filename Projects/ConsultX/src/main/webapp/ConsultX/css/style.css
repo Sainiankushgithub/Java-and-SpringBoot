@@ -103,28 +103,6 @@ p {
   backdrop-filter: blur(8px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
-/* About section code  */
-.about-section {
-  background-color: #ffffff;
-}
-.vertical-aln {
-  width: 3px;
-  height: 40px;
-  background-color: grey;
-}
-.link-a a {
-  background-color: whitesmoke;
-  border: 2px solid grey;
-  border-radius: 50px;
-  margin-bottom: 10px;
-  font-weight: 1000;
-  padding-left: 35px;
-}
-.link-a a:hover {
-  background-color: #0d6efd;
-  border: 1px solid grey;
-  color: white;
-}
 /* Request for services  */
 .image-container::before {
   content: "";
@@ -208,11 +186,13 @@ option {
 /* Signup page CSS  */
 .signup-section {
   min-height: 100vh;
- /*  background: #000000; */
-  background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(13, 13, 43, 1) 35%,
+    rgba(168, 168, 160, 1) 100%
+  );
   display: flex;
 }
 
@@ -227,7 +207,6 @@ span .sign-border:hover {
   background-color: white;
   color: black;
 }
-
 
 
 /*
@@ -285,14 +264,116 @@ Sign page css code
   width: 100%;
 }
 .signup-btn{
-  background-color: white;
-  color: black;
+  padding: 10px 15px;
+  color: white;
+  border: 1px solid white;
   border-radius: 50px;
 }
 .signup-btn:hover{
-  background-color: black;
-  color:white;
+  background-color: white;
+  color: black;
 }
 
+
+
+/* 
+
+
+
+
+*/
+.file-margin{
+  margin-right: 135px;
+}
+
+/* Ensure consistent layout */
+.file-label-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#filelabel {
+  display: inline-block;
+  min-width: 200px;         /* Fixed width to prevent shifting */
+  white-space: nowrap;      /* Prevent wrapping */
+  overflow: hidden;         /* Hide overflowed text */
+  text-overflow: ellipsis;  /* Show ... when text overflows */
+}
+
+
+/* 
+*
+User consultor 
+*
+*/
+
+.img-control{
+  border-radius: 80px;
+  height: 150px;
+  width: 150px;
+}
+.user-container{
+  height: 100vh;
+  /* background-color: #222222; */
+  background-color: #191919;
+}
+
+
+/* 
+*
+*
+    About Pge
+*
+*/
+.header-container{
+  width: 100%;
+}
+@media (min-width:992px) {
+  .header-container{
+    width: 60%;
+    margin: 0 auto;
+}
+}
+.img-control-about{
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .py-sm-3{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+.clipped-section{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 96.25%, 50% 99%, 0% 96.25%);
+  /* background-color: #1d1716; */
+  background-color: #252525;
+}
+.dot-size{
+  font-size: 5px;
+}
+
+.img-control-about-consultx{
+  border-radius: 10px;
+}
+
+@media(min-width: 641px){
+  .img-control-about-consultx{
+    width: 600px;
+    height: 400px;
+  }
+}
+@media(min-width: 768px){
+.sticky-sidebar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  z-index: 1;
+}
+}
 
 
