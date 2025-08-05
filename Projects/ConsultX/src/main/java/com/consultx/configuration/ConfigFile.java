@@ -12,8 +12,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-//import com.consultx.dao.UserDao;
-//import com.consultx.dao.UserDaoImpl;
+import com.consultx.dao.ConsulteeDao;
+import com.consultx.dao.ConsulteeDaoImpl;
+import com.consultx.dao.UserDao;
+import com.consultx.dao.UserDaoImpl;
 
 @Configuration
 @EnableWebMvc
@@ -43,9 +45,14 @@ public class ConfigFile implements WebMvcConfigurer {
         return new JdbcTemplate(dataSource);
     }
 
+    @Bean
+    public UserDao getUserDao(JdbcTemplate jdbcTemplate) {
+        return new UserDaoImpl(jdbcTemplate);
+    }
+//    
 //    @Bean
-//    public UserDao getUserDao(JdbcTemplate jdbcTemplate) {
-//        return new UserDaoImpl(jdbcTemplate);
+//    public ConsulteeDao getConsulteeDao(JdbcTemplate jdbcTemplate) {
+//    	return new ConsulteeDaoImpl(jdbcTemplate);
 //    }
 
     @Override
