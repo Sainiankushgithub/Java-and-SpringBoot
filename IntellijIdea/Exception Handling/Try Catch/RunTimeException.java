@@ -13,7 +13,7 @@ public class RunTimeException {
         }catch(NullPointerException npe){
             System.out.println(npe);
         }
-        // Simple Error of stack over flow 
+        // Simple Error of stack over flow
         try{
             recursive();
         }catch (Error e){
