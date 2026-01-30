@@ -1,4 +1,4 @@
-// 4.Performing multiple task from multiple thread 
+// 4.Performing multiple task from multiple thread
 class MyThread1 extends Thread{
     public void run(){
         System.out.println("Task 1");
