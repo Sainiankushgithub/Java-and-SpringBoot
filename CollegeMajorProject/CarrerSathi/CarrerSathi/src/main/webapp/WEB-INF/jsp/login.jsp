@@ -59,7 +59,7 @@
 			<div class="row rounded g-0 mt-5">
 				<div class="col-lg-6 d-none d-lg-block">
 					<img class="img-fluid w-100 h-100 bg-color-col1"
-						src="/ConsultX/images/consultee.jpg" alt="">
+						src="${pageContext.request.contextPath}/image/signin.png" alt="">
 				</div>
 				<div
 					class="col-lg-6 col-sm-12 col-md-12 text-center py-5 bg-color-col2 ">
@@ -72,12 +72,12 @@
 					<h3 class="mb-5">Login</h3>
 
 					<div class="container text-center">
-						<form action="processUserForm" method="post">
+						<form action="processloginform" method="post">
 							<div class="custom-input-group">
 								<span> <i class="fa-solid fa-message fs-3 me-4"
 									style="color: #ffffff;"></i> <input type="text"
 									class="custom-input" placeholder="Email or phone number"
-									name="email_phone"></span>
+									name="emailOrPhone"></span>
 							</div>
 							<div class="custom-hr-tag mb-4"></div>
 							<div class="custom-input-group">
@@ -124,52 +124,28 @@
 			</div>
 		</div>
 	</section>
-
-	<%-- <c:if test="${not empty validMessageConsultor }">
-		<script>
-		Swal.fire({
-			  title: "${validMessageConsultor}",
-			  text: "Redirecting.....",
-			  icon: "success",
-			  showConfirmButton:false,
-			  timer:2000
-			}).then(()=>{
-				// window.location.href="${pageContext.request.contextPath}/userConsultor";
-			});
-		</script>
-	</c:if> --%>
-
-
-	<%-- <c:if test="${not empty validMessageConsultee}">
-		<script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		var error = "${error}";
+		var success = "${success}";
+		if(error && error.trim().length>0){
 			Swal.fire({
-				title: "${validMessageConsultee}",
-				text: "Redirecting.....",
-				icon: "success",
-				showConfirmButton:false,
-				timer:2000
+				icon : "error",
+				title : "Oops...",
+				text : "${error}",
+			});
+		}else if(success && success.trim().length>0){
+			Swal.fire({
+				icon : "success",
+				title : "success",
+				text : "${success}",
+				timer : 2000,
+				showConfirmButton : false
 			}).then(()=>{
-				// window.location.href="${pageContext.request.contextPath}/userConsultee";
+				window.location.href="${pageContext.request.contextPath}/test";
 			});
-		</script>
-	</c:if>
-
-
-	<c:if test="${not empty invalidMessage }">
-		<script>
-		Swal.fire({
-			  title: "Error !",
-			  text: "${invalidMessage}",
-			  icon: "error",
-			  showConfirmButton:false,
-			  timer:2000
-			});
-		</script>
-	</c:if> --%>
-
-
-
-
+		}
+	</script>
 	<!-- Bootstrap JS -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

@@ -43,7 +43,7 @@
     <div class="container pt-5 text-center">
       <div class="row rounded g-0 mt-5">
         <div class="col-lg-6 d-none d-lg-block">
-          <img class="img-fluid w-100 h-100 bg-color-col1" src="/ConsultX/images/consult.jpg" alt="">
+          <img class="img-fluid w-100 h-100 bg-color-col1" src="${pageContext.request.contextPath}/image/signup.png" alt="">
         </div>
         <div class="col-lg-6 col-sm-12 col-md-12 text-center pt-5 pb-3 bg-color-col2 ">
           <h1><span class="brand-main">Career</span><span class="brand-accent">Saathi</span></h1>
@@ -52,9 +52,9 @@
             Choose your path: sign up as a Consultee to get expert help, or become a Consultant to offer your skills and
             grow your network.
           </p>
-          <a class="btn btn-outline-light btn-lg" href=""><i class="fa-solid fa-user fa-fade me-2"></i>Signup as a Consultee</a>
+          <a class="btn btn-outline-light btn-lg" href="${pageContext.request.contextPath}/signupconsultee"><i class="fa-solid fa-user fa-fade me-2"></i>Signup as a Consultee</a>
           <h5 class="mt-2">or</h5>
-          <a class="btn btn-outline-light btn-lg" href=""><i class="fa-solid fa-user-graduate fa-fade me-2"></i>Signup as a Consultor</a>
+          <a class="btn btn-outline-light btn-lg" href="${pageContext.request.contextPath}/signupconsultor"><i class="fa-solid fa-user-graduate fa-fade me-2"></i>Signup as a Consultor</a>
           <hr class="mt-4"  style="border: 2px solid gray; width: 90%; margin: 0 auto;">
           <p class="text-start mt-3 ps-5">social</p>
           <p class="text-start mt-1 ps-5 fs-5">Follow us for the latest updates </p>
