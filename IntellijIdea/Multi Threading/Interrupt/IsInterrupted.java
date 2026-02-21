@@ -2,7 +2,7 @@ class MyThread3 extends  Thread{
     public void run(){
         try{
             System.out.println("IsInterrupted ? " + Thread.currentThread().isInterrupted());
-            // IsInterrupted Doesn't clear the flag , it remains true 
+            // IsInterrupted Doesn't clear the flag , it remains true
             for(int i=1;i<=5;i++){
                 System.out.println(Thread.currentThread().getName()+" : "+i);
                 System.out.println("IsInterrupted ? : "+Thread.currentThread().isInterrupted());
