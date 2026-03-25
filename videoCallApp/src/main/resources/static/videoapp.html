@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Call App</title>
+</head>
+<body>
+
+<h2>Video Call App</h2>
+
+<input id="username" placeholder="Enter your name" />
+<input id="roomCode" placeholder="Enter Room Code" />
+
+<button onclick="createRoom()">Create Room</button>
+<button onclick="joinRoom()">Join Room</button>
+
+<div id="video-call" style="width: 800px; height: 500px;"></div>
+
+<script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+
+<script>
+    const APP_ID = 1592206476; // REAL APP ID
+    const SERVER_SECRET = "9c10480594beaddd9f42087c362247ef"; // SECRET
+
+    function generateRoomCode() {
+      return Math.random().toString(36).substring(2, 7);
+    }
+
+    function createRoom() {
+      const roomID = generateRoomCode();
+      document.getElementById("roomCode").value = roomID;
+      alert("Room Code: " + roomID);
+      joinRoom();
+    }
+
+    function joinRoom() {
+      const roomID = document.getElementById("roomCode").value;
+      const userName = document.getElementById("username").value;
+
+      if (!roomID || !userName) {
+        alert("Enter name & room code");
+        return;
+      }
+
+      startCall(roomID, userName);
+    }
+
+    function startCall(roomID, userName) {
+      const userID = Date.now().toString();
+
+      // ✅ WORKING TOKEN (no backend needed now)
+      const token = ZegoUIKitPrebuilt.generateKitTokenForTest(
+        APP_ID,
+        SERVER_SECRET,
+        roomID,
+        userID,
+        userName
+      );
+
+      const zp = ZegoUIKitPrebuilt.create(token);
+
+      zp.joinRoom({
+        container: document.getElementById("video-call"),
+        sharedLinks: [
+          {
+            name: "Copy Link",
+            url: window.location.origin + "?roomID=" + roomID,
+          },
+        ],
+        scenario: {
+          mode: ZegoUIKitPrebuilt.GroupCall,
+        },
+      });
+    }
+</script>
+
+</body>
+</html>

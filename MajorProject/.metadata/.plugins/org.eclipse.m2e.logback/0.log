@@ -1,0 +1,8 @@
+2026-03-26 02:15:43,538 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2026-03-26 02:16:22,482 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CarrerSathi:CarrerSathi:0.0.1-SNAPSHOT @ C:\GitHub\Java & SpringBoot\MajorProject\CarrerSathi\pom.xml.
+2026-03-26 02:16:32,965 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-03-26 02:16:33,006 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2026-03-26 02:16:33,070 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\GitHub\Java & SpringBoot\MajorProject\CarrerSathi\src\test\resources
+2026-03-26 02:16:34,990 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2026-03-26 02:16:34,994 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2026-03-26 02:16:35,052 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\GitHub\Java & SpringBoot\MajorProject\CarrerSathi\src\test\resources
