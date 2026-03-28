@@ -1,2 +1,3 @@
-2026/03/26-02:15:42.725 52c0 Creating DB C:\GitHub\Java & SpringBoot\MajorProject\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
-2026/03/26-02:15:42.762 52c0 Reusing MANIFEST C:\GitHub\Java & SpringBoot\MajorProject\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/28-13:12:28.541 64cc Reusing MANIFEST C:\GitHub\Java & SpringBoot\MajorProject\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/28-13:12:28.564 64cc Recovering log #3
+2026/03/28-13:12:28.570 64cc Reusing old log C:\GitHub\Java & SpringBoot\MajorProject\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 
